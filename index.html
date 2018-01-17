@@ -22,22 +22,22 @@
         $(document).ready(function(){
             // Add smooth scrolling to all links in navbar + footer link
             $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-        
+
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
-        
+
             // Prevent default anchor click behavior
             event.preventDefault();
-        
+
             // Store hash
             var hash = this.hash;
-        
+
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 900, function(){
-        
+
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
                 });
@@ -55,9 +55,9 @@
                 var bottom_of_window = $(window).scrollTop() + $(window).height();
                 /* If the object is completely visible in the window, fade it it */
                 if( bottom_of_window > bottom_of_object){
-                    $(this).animate({'opacity':'1'},1000);   
+                    $(this).animate({'opacity':'1'},1000);
                 }
-            }); 
+            });
 
 
             /* If element becomes visible after page scrolls then make it become visible */
@@ -68,15 +68,15 @@
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     /* If the object is completely visible in the window, fade it it */
                     if( bottom_of_window > bottom_of_object){
-                        $(this).animate({'opacity':'1'},1500);   
+                        $(this).animate({'opacity':'1'},1500);
                     }
-                }); 
+                });
             });
         });
     </script>
     <!-- Navbar Scrolling Script -->
     <script>
-        $(document).ready(function(){       
+        $(document).ready(function(){
             var scroll_start = 0;
             var startchange = $('#startchange');
             var offset = startchange.offset();
@@ -88,7 +88,7 @@
                 $('#navbar').css('background-color', 'transparent');
                 $('#navbar').css('box-shadow', '0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19)');
             }
-            $(document).scroll(function() { 
+            $(document).scroll(function() {
                 scroll_start = $(this).scrollTop();
                 if(scroll_start > offset.top) {
                     $('#navbar').css('background-color', '#4e69ec');
@@ -105,27 +105,27 @@
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("Feb 8, 2018 12:00:00").getTime();
-        
+
         // Update the count down every 1 second
         var x = setInterval(function() {
-        
+
           // Get todays date and time
           var now = new Date().getTime();
-        
+
           // Find the distance between now an the count down date
           var distance = countDownDate - now;
-        
+
           // Time calculations for days, hours, minutes and seconds
           var days = Math.floor(distance / (1000 * 60 * 60 * 24));
           var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
+
           // Display the result in the element with id="demo"
           document.getElementById("demo").innerHTML = days + "d " + hours + "h "
           + minutes + "m " + seconds + "s ";
-        
-          // If the count down is finished, write some text 
+
+          // If the count down is finished, write some text
           if (distance < 0) {
             clearInterval(x);
             document.getElementById("demo").innerHTML = "EXPIRED";
@@ -141,7 +141,7 @@
             videoSRCauto = videoSRC + "?modestbranding=0&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
             $(theModal + ' iframe').attr('src', videoSRCauto);
             $(theModal).on('click', function(){
-                $(theModal + ' iframe').attr('src', videoSRC);                
+                $(theModal + ' iframe').attr('src', videoSRC);
             });
           });
         });
@@ -169,6 +169,7 @@
                     <li><a href="#token" class="hideme"><b>TOKEN</b></a></li>
                     <li><a href="#roadmap" class="hideme"><b>ROADMAP</b></a></li>
                     <li><a href="#team" class="hideme"><b>TEAM</b></a></li>
+                    <li><a href="faq.html" class="hideme"><b>FAQ</b></a></li>
                 </ul>
             </div>
         </div>
@@ -197,7 +198,7 @@
             <a href="https://facebook.com/trenditstudios" target="blank"><img class="hideme" src="images/icons/facebookBanner.png" width="44"> </a>
             <a href="https://bitcointalk.org/index.php?topic=2581060.msg26286151#msg26286151" target="blank"><img class="hideme" src="images/icons/btctalkBanner.png" width="44"></a>
             <a href="https://medium.com/@trenditstudio/introducing-trendit-2f44344fcdc3" target="blank"><img class="hideme" src="images/icons/mediumBanner.png" width="44"></a>
-        </div>  
+        </div>
         <div class="modal fade text-center" id="crowdsaleInfo">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -251,7 +252,7 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
     </div>
 
     <!-- Overview -->
@@ -337,8 +338,8 @@
     <div class="bg-platform" id="platform">
         <div class="myback"></div>
         <div class="container container-fluid text-center platform">
-            <h2 class="hideme"><b>A Unique Social Media Experience</b></h2><br> 
-            <h4 align="center" class="hideme">Trendit differntiates itself from the competition by offering users cryptocurrency rewards!</h4>           
+            <h2 class="hideme"><b>A Unique Social Media Experience</b></h2><br>
+            <h4 align="center" class="hideme">Trendit differntiates itself from the competition by offering users cryptocurrency rewards!</h4>
             <div class="row">
                 <div class="col-md-8 col-sm-12">
                     <img class="hidden-xs" src="images/mockup/challengeCard.PNG" width="100%">
@@ -354,7 +355,7 @@
             </div>
             <br>
             <div class="well myWellGallery">
-            <h3 class="hideme"><b>User Interface Gallery</b></h3><br>   
+            <h3 class="hideme"><b>User Interface Gallery</b></h3><br>
             <div class="row text-center">
                     <div class="col-xl-1"><p></p></div>
                     <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6" align="center">
@@ -450,7 +451,7 @@
     <div class="container-fluid text-center bg-blue2 crowdsale" id="token">
         <div class="well">
             <br>
-            <h2 class="hideme"><b>Crowdsale</b></h2> 
+            <h2 class="hideme"><b>Crowdsale</b></h2>
             <h4 align="center" class="hideme">Funds raised from the crowdsale will be distributed as follows.</h4><br>
             <div class="row innerSale hideme">
                 <div class="col-md-6 col-sm-12">
@@ -473,16 +474,16 @@
             <b>Tokens for Sale:</b> 120M/200M<br>
             <b>Platform:</b> Ethereum<br>
             <b>Start Date:</b> February 8th, 2018 at 12PM EST
-            </p>      
+            </p>
             <hr>
             <h4 align="center" class="hideme">Use of the raised funds will be displayed publicly to enable transparency with our investors.</h4>
             <br>
-        </div>   
+        </div>
     </div>
 
     <!-- Token Distribution -->
     <div class="container-fluid text-center bg-blue" id="token2">
-        <h2 class="hideme"><b>Token Distribution and Payments</b></h2><br> 
+        <h2 class="hideme"><b>Token Distribution and Payments</b></h2><br>
         <h4 align="center" class="hideme">Trend Tokens will be divided into 3 main categories as shown below:</h4>
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12 hideme">
@@ -587,7 +588,7 @@
                         <div class="desc hideme" align="left">TrenditStudios goals and the founding team were established!</div>
                         </div>
                     </li>
-                    
+
                     <!-- Item 2 -->
                     <li>
                         <div class="direction-l">
@@ -608,7 +609,7 @@
                         </div>
                         <div class="desc hideme" align="left">Trendit was announced publically. Bounty programs were organized to start building our user base.</div>
                         </div>
-                    </li>                    
+                    </li>
                     <!-- Item 3 -->
                     <li>
                         <div class="direction-l">
@@ -708,7 +709,7 @@
                         <a href="https://www.linkedin.com/in/omer-shukrullah-trendit" style="display: inline" target="blank"><img src="images/icons/linkedin.png"></a>
                     </div>
                 </div>
-                
+
             </div>
 
             <!-- Amit Roy -->
@@ -737,7 +738,7 @@
                         <a href="https://www.linkedin.com/in/a24roy" style="display: inline" target="blank"><img src="images/icons/linkedin.png"></a>
                     </div>
                 </div>
-                
+
             </div>
 
             <!-- Atique Chowdry -->
@@ -927,7 +928,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- As seen in section -->
 
     <!-- Contact Us Container -->
@@ -955,7 +956,7 @@
                             <a target="_top" class="btn btn-default pull-left" href="mailto: support@trenditstudios.com?subject=Need Support">Send</a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <br><br>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/trenditIcon/trendit2.png">
+    <title>TrenditStudios</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Modified CSS -->
+    <link rel="stylesheet" type="text/css" href="mainCSS.css">
+    <!-- Timeline CSS -->
+    <link rel="stylesheet" type="text/css" href="files/timelineCSS.css">
+    <!-- FAQ CSS -->
+    <link rel="stylesheet" href="faq/reset.css"> <!-- CSS reset -->
+  	<link rel="stylesheet" href="faq/style.css"> <!-- Resource style -->
+  	<script src="faq/modernizr.js"></script> <!-- Modernizr -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+
+  	<link rel="stylesheet" href="faq/bundle.min.css">
+
+    <!-- Smooth Scrolling script -->
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+                });
+            } // End if
+            });
+        })
+    </script>
+    <!-- Fade in script -->
+    <script>
+        $(document).ready(function() {
+
+            /* If element is visible on page load then make it visible immediately */
+            $('.hideme').each( function(i){
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight()/4;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object){
+                    $(this).animate({'opacity':'1'},1000);
+                }
+            });
+
+
+            /* If element becomes visible after page scrolls then make it become visible */
+            $(window).scroll( function(){
+                /* Check the location of each desired element */
+                $('.hideme').each( function(i){
+                    var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/4);
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object){
+                        $(this).animate({'opacity':'1'},1500);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Navbar Scrolling Script -->
+    <script>
+        $(document).ready(function(){
+            var scroll_start = 0;
+            var startchange = $('#startchange');
+            var offset = startchange.offset();
+            scroll_start = $(this).scrollTop();
+            if(scroll_start > offset.top) {
+                $('#navbar').css('background-color', '#4e69ec');
+                $('#navbar').css('box-shadow', '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)');
+            } else {
+                $('#navbar').css('background-color', 'transparent');
+                $('#navbar').css('box-shadow', '0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19)');
+            }
+            $(document).scroll(function() {
+                scroll_start = $(this).scrollTop();
+                if(scroll_start > offset.top) {
+                    $('#navbar').css('background-color', '#4e69ec');
+                    $('#navbar').css('box-shadow', '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)');
+                    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+                } else {
+                    $('#navbar').css('background-color', 'transparent');
+                    $('#navbar').css('box-shadow', '0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19)');
+                }
+            });
+        });
+    </script>
+    <!-- Crowdsale Timer Script Old -->
+
+
+    <!-- Modal Video Script -->
+
+</head>
+
+<body id="_faq" class="responsive" data-offset="60">
+
+    <!-- Trendit Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container navbar-inner">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#main"><!--<img id="nav-logo" class="hideme" src="images/trenditIcon/trendit2.png" width="40">--><img id="nav-logo" class="hideme" src="images/trenditString/stringSmall.png"></a>
+            </div>
+            <nav class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li data-toggle="collapse" data-target="#myNavbar">-->
+                    <li><a href="index.html" class="hideme"><b>Home</b></a></li>
+                    <li><a href="faq.html" class="hideme"><b>FAQ</b></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trendit Jumbotron -->
+    <div class="jumbotron jumbotron-billboard text-center" id="main">
+        <div class="img"></div>
+        <div class="container">
+            <div id="startchange"></div>
+            <br><br><br>
+
+            <br>
+            <h1 class="hideme"><b>Frequently Asked Questions</b></h3>
+        </div>
+    </div>
+
+    <section class="cd-faq">
+    	<ul class="cd-faq-categories">
+    		<li><a class="selected" href="#platform">PLATFORM</a></li>
+    		<li><a href="#token">TOKEN</a></li>
+    		<li><a href="#tokensale">CROWDSALE</a></li>
+    		<li><a href="#company">COMPANY</a></li>
+    		<li><a href="#other">OTHER</a></li>
+    	</ul>
+
+    	<div class="cd-faq-items">
+    		<ul id="platform" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Platform</h2></li>
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">What is Trendit?</a>
+    				<div class="cd-faq-content">
+    					<p>A platform for viral content that rewards users and provides Big data Analytics powered by AI services to businesses all on the blockchain. </p>
+    				</div>
+    			</li>
+
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">Who are Trend Setters?</a>
+    				<div class="cd-faq-content">
+    					<p>Another name for content creator, any user of the platform that add posts, links, images, contests etc.</p>
+    				</div>
+    			</li>
+
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">How is Trendit different from other social media platforms?
+</a>
+    				<div class="cd-faq-content">
+    					<p>Trendit is different from current social media because it focuses on trends, events and challenges. It’s purpose is less on social communication but rather interactions of individuals or groups on products, news or any other content.
+</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+          <li>
+            <a class="cd-faq-trigger" href="#0">When will the alpha platform be made available?</a>
+            <div class="cd-faq-content">
+              <p>The alpha platform is targeted for End of Q1 2018. An extensive roadmap will be released upon the completion of the crowdsale.</p>
+            </div>
+          </li>
+          <li>
+            <a class="cd-faq-trigger" href="#0">Can anyone participate in the alpha?</a>
+            <div class="cd-faq-content">
+              <p>Yes, you will just need to register an account on our site!
+          </p>
+            </div>
+          </li>
+
+    			</li>
+    		</ul>
+
+    		<ul id="token" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Business Model</h2></li>
+
+          <li>
+            <a class="cd-faq-trigger" href="#0">What are some use cases for trendit?</a>
+            <div class="cd-faq-content">
+              <p>
+                Trend setters will get paid in TND for sharing their content depending on the traction it gathers
+TND will also be used as means of transaction for users who would like to use the analytics and promotion services provided by Trendit.
+Any user can earn rewards in TND with their content. Content can be as simple as a picture of your breakfast to a detailed challenge for your friends/followers or everyone to run 10KM every week.
+              </p>
+            </div>
+          </li>
+          <li>
+            <a class="cd-faq-trigger" href="#0">How will TND holders (aka. Hodlers) benefit?</a>
+            <div class="cd-faq-content">
+              <p>
+                When users/enterprises pay using TND to use the platform services,
+                half of the payment will be burnt until a total of 100 million token remain in circulation. This will positively impact the token value.
+              </p>
+            </div>
+          </li>
+          <li>
+            <a class="cd-faq-trigger" href="#0">What happens when TND runs out and users can't pay in TND anymore?
+</a>
+            <div class="cd-faq-content">
+              <p>
+                Using TND over any other currency on the platform allows users to get a discount on the payment.
+                This will encourage them to use TND  as a means of payment. Trendit will allow users to buy TND for using as payments.
+              </p>
+            </div>
+          </li>
+          <li>
+            <a class="cd-faq-trigger" href="#0">What about competition?
+</a>
+            <div class="cd-faq-content">
+              <p>
+                Currently there are very few if any platforms that are a direct competition to Trendit.
+                We plan to be the first in the market and utilize that to our advantage.
+
+              </p>
+            </div>
+          </li>
+
+
+
+    		</ul>
+
+    		<ul id="tokensale" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Tokensale</h2></li>
+
+          <li>
+            <a class="cd-faq-trigger" href="#0">What are TND tokens??</a>
+            <div class="cd-faq-content">
+              <p>Trendit (TND) are ERC20 standard tokens created on the Ethereum blockchain. They are utility tokens for the transaction of trends on the Trendit platform.</p>
+            </div>
+          </li>
+
+          <li>
+            <a class="cd-faq-trigger" href="#0">What is the total and circulating supply?</a>
+            <div class="cd-faq-content">
+              <p>There is a total of 200 Million tokens available. 120 Million tokens will be in circulation.
+              </p>
+            </div>
+          </li>
+
+
+          <li>
+    				<a class="cd-faq-trigger" href="#0">What is the distribution of tokens?</a>
+    				<div class="cd-faq-content">
+    					<p>60% of the tokens will be allocated for ICO. Remaining 40% will be reserved by Trendit.
+
+              </p>
+
+              <p> The reserved are for User Payment and acquisition to start the platform, Bounties, Airdrops, Advisors and as contingency budgets for additional resources as needed
+</p>
+    				</div>
+    			</li>
+
+          <li>
+    				<a class="cd-faq-trigger" href="#0">When is the ICO?</a>
+    				<div class="cd-faq-content">
+    					<p>
+                  The Initial Coin Offering will take place on Feb 8, 2018.
+    					</p>
+    				</div>
+    			</li>
+
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">Is there a whitelist for the ICO and Pre-sale</a>
+    				<div class="cd-faq-content">
+    					<p>Yes, there will be two seperate whitelist for each sale. An annoucement will be made on all social media about it.</p>
+    				</div>
+    			</li>
+
+
+    			<li>
+    				<!--<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<li>
+    				<!--<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum at aspernatur iure facere ab a corporis mollitia molestiae quod omnis minima, est labore quidem nobis accusantium ad totam sunt doloremque laudantium impedit similique iste quasi cum! Libero fugit at praesentium vero. Maiores non consequuntur rerum, nemo a qui repellat quibusdam architecto voluptatem? Sequi, possimus, cupiditate autem soluta ipsa rerum officiis cum libero delectus explicabo facilis, odit ullam aperiam reprehenderit! Vero ad non harum veritatis tempore beatae possimus, ex odio quo.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+    		</ul> <!-- cd-faq-group -->
+
+    		<ul id="company" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Company</h2></li>
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">Why did we start Trendit?</a>
+    				<div class="cd-faq-content">
+    					<p>We started Trendit because current social media sites don’t give power to the users who use the platform. Additionally, the data users generate are kept away and sold to data agencies who then sell to other lucrative parties.
+                This helps social media and data agencies to win while the users of the platform aren’t rewarded in any way. Our vision is to create a platform that is fair to all users in it
+                through the use of blockchain technology.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+          <li>
+    				<a class="cd-faq-trigger" href="#0">Where is Trendit located?</a>
+    				<div class="cd-faq-content">
+    					<p>We are based in the beautiful city of Toronto, Ontario, Canada!</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusantium dolorem vel, ad, nostrum natus eos, nemo placeat quos nisi architecto rem dolorum amet consectetur molestiae reprehenderit cum harum commodi beatae necessitatibus. Mollitia a nostrum enim earum minima doloribus illum autem, provident vero et, aspernatur quae sunt illo dolorem. Corporis blanditiis, unde, neque, adipisci debitis quas ullam accusantium repudiandae eum nostrum quis! Velit esse harum qui, modi ratione debitis alias laboriosam minus eaque, quod, itaque labore illo totam aut quia fuga nemo. Perferendis ipsa laborum atque assumenda tempore aspernatur a eos harum non id commodi excepturi quaerat ullam, explicabo, incidunt ipsam, accusantium quo magni ut! Ratione, magnam. Delectus nesciunt impedit praesentium sed, aliquam architecto dolores quae, distinctio consectetur obcaecati esse, consequuntur vel sit quis blanditiis possimus dolorum. Eaque architecto doloremque aliquid quae cumque, vitae perferendis enim, iure fugiat, soluta aut!</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+    		</ul> <!-- cd-faq-group -->
+
+    		<!--<ul id="ecosystem" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Ecosystem</h2></li>
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus magni vero deserunt enim et quia in aliquam, rem tempore voluptas illo nisi veritatis quas quod placeat ipsa! Error qui harum accusamus incidunt at libero ipsum, suscipit dolorum esse explicabo in eius voluptates quidem voluptatem inventore amet eaque deserunt veniam dignissimos excepturi? Dolore, quo amet nostrum autem nemo. Sit nam assumenda, corporis ea sunt distinctio nostrum doloribus alias, beatae nesciunt dolore saepe consequuntur minima eveniet porro dolor officiis maiores ab obcaecati officia enim aliquam. Itaque fuga molestiae hic accusantium atque corporis quia id sequi enim vero? Hic aperiam sint facilis aliquam quia, accusamus tenetur earum totam enim est, error. Iusto, reiciendis necessitatibus molestias. Voluptatibus eos explicabo repellat nesciunt nam vero minima.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+    		</ul> <!-- cd-faq-group -->
+
+    		<ul id="other" class="cd-faq-group">
+    			<li class="cd-faq-title"><h2>Other</h2></li>
+    			<li>
+    				<a class="cd-faq-trigger" href="#0">Got a question that hasn't been answered?</a>
+    				<div class="cd-faq-content">
+    					<p>No worries! You can always contact us through our <a href="https://t.me/trenditstudios" style="font-size: 0.875rem;">Trendit Annoucement Telegram channel</a>, or <a href="https://t.me/joinchat/HjIQExE7tZa4f4XqbbSfWQ" style="font-size: 0.875rem;">Trendit Community Telegram channel</a></p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+
+    			<!--<li>
+    				<a class="cd-faq-trigger" href="#0">Test Test Test</a>
+    				<div class="cd-faq-content">
+    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
+    				</div> <!-- cd-faq-content -->
+    			</li>
+    		</ul> <!-- cd-faq-group -->
+    	</div> <!-- cd-faq-items -->
+    	<a href="#0" class="cd-close-panel">Close</a>
+    </section> <!-- cd-faq -->
+
+
+    <script src="faq/jquery-2.1.1.js"></script>
+    <script src="faq/jquery.mobile.custom.min.js"></script>
+    <script src="faq/main.js"></script>
+</body>
+
+</html>
