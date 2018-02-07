@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<link rel="shortcut icon" href="images/trenditIcon/trendit2.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TrenditStudios - Presale</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Trendit Presale" />
+	<meta name="keywords" content="Trendit Presale ICO ETH TOP Feb Low cap" />
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="crowdsale/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="crowdsale/fonts/BalooDa.ttf">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="crowdsale/css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="crowdsale/css/style.css">
+
+
+
+	<!-- Modernizr JS -->
+	<script src="crowdsale/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+		<div class="container navbar-inner">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html">
+					<!--<img id="nav-logo" class="hideme" src="images/trenditIcon/trendit2.png" width="40">-->
+					<img id="nav-logo" class="hideme" src="images/trenditString/stringSmall.png">
+				</a>
+			</div>
+			<nav class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li data-toggle="collapse" data-target="#myNavbar">-->
+					<li>
+						<a href="index.html" class="hideme">
+							<b>HOME</b>
+						</a>
+					</li>
+					<li>
+						<a href="faq.html" class="hideme">
+							<b>FAQ</b>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</nav>
+	<div class="fh5co-loader"></div>
+
+	<div class="jumbotron jumbotron-billboard text-center" id="main">
+		<div class="img"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 hideme">
+					<div class="display-t js-fullheight">
+						<div class="display-tc animate-box">
+							<nav class="fh5co-nav" role="navigation">
+								<img id="img-pad" src="crowdsale/images/logo.png" alt="">
+								<div class="largefont">
+									Presale
+								</div>
+							</nav>
+							<div class="simply-countdown simply-countdown-one"></div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 hideme">
+					<div class="card">
+						<div class="container2">
+							<p class=" card sale_bonus">
+								<span class="bonus">BONUS: 150%</span>
+							</p>
+							<p align="center">
+							<span class="sale_text_blu" style="margin-top:20px;">1 ETH = 12,500 TND</span><br>
+							<span class="sale_text_blu">Softcap: 100 ETH</span><br>
+							<span class="sale_text_red">Hardcap: 400 ETH</span><br>
+							<span class="sale_text_blu">Min. Contribution: 0.1 ETH</span><br>
+							<span class="sale_text_red">Max. Contribution: 50 ETH</span><br>
+							<span class="sale_text_blu">Duration: Feb 8 - Feb 15</span>
+							</p>
+							<p class="sicons">
+								<a href="https://t.me/joinchat/HjIQExE7tZa4f4XqbbSfWQ" target="blank">
+									<img class="hideme" src="images/icons/telegramBanner.png" width="44">
+								</a>
+								<a class="btn btn-success btn-lg" href="files/whitepaper.pdf" target="_blank">Whitepaper</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- jQuery -->
+	<script src="crowdsale/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="crowdsale/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="crowdsale/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="crowdsale/js/jquery.waypoints.min.js"></script>
+
+	<!-- Count Down -->
+	<script src="crowdsale/js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="crowdsale/js/main.js"></script>
+
+	<script>
+		var d = new Date(new Date().getTime() + 5 * 120 * 160 * 2500);
+
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate() + 1
+		});
+
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth(),
+			day: d.getDate() + 1,
+			enableUtc: false
+		});
+	</script>
+
+</body>
+
+</html>
