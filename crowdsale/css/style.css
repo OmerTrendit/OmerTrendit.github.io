@@ -182,6 +182,13 @@ h1, h2, h3, h4, h5, h6, figure {
 
 }
 
+.largefont2{
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  font-family: 'Baloo Da', cursive;;
+
+}
+
 .test{
   margin-top: 105px;
   color: black;
