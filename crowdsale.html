@@ -36,37 +36,39 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-		<!-- Token Sale Timer Script Old -->
-		<script>
-			// Set the date we're counting down to
-			var countDownDate = new Date("Feb 8, 2018 22:00:00").getTime();
-	
-			// Update the count down every 1 second
-			var x = setInterval(function() {
-	
-			  // Get todays date and time
-			  var now = new Date().getTime();
-	
-			  // Find the distance between now an the count down date
-			  var distance = countDownDate - now;
-	
-			  // Time calculations for days, hours, minutes and seconds
-			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-	
-			  // Display the result in the element with id="demo"
-			  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-			  + minutes + "m " + seconds + "s ";
-	
-			  // If the count down is finished, write some text
-			  if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("demo").innerHTML = "EXPIRED";
-			  }
-			}, 1000);
-		</script>
+	<!-- Token Sale Timer Script Old -->
+	<script>
+        // Set the date we're counting down to
+        
+        var countDownDate = new Date("Feb 9, 2018 03:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date();
+          var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds()).getTime();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - nowUTC;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    </script>
 
 </head>
 
@@ -117,7 +119,8 @@
 									Presale
 								</div>
 							</nav>
-							<div class="largefont2">Feb 08, 2018 at 10 PM EST</div>
+							<div class="largefont2" id="demo"></div>
+							<!--<div class="largefont2">Feb 08, 2018 at 10 PM EST</div>-->
 							<!--<div class="simply-countdown simply-countdown-one"></div-->
 
 						</div>
