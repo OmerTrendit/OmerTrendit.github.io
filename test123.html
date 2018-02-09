@@ -38,31 +38,35 @@
 
 	<!-- Token Sale Timer Script Old -->
 	<script>
-        // Set the date we're counting down to
-        
-        var countDownDate = new Date("Feb 9, 2018 03:00:00").getTime();
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-          // Get todays date and time
-          var now = new Date();
-          var nowUTC = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds()).getTime();
-          // Find the distance between now an the count down date
-          var distance = countDownDate - nowUTC;
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-          // Display the result in the element with id="demo"
-          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-          // If the count down is finished, write some text
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-    </script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Feb 8, 2018 22:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function () {
+
+			// Get todays date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now an the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Display the result in the element with id="demo"
+			document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+
+			// If the count down is finished, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "EXPIRED";
+			}
+		}, 1000);
+	</script>
 
 </head>
 
@@ -114,31 +118,36 @@
 								</div>
 							</nav>
 							<div class="largefont2" id="demo"></div>
-							<!--<div class="largefont2">Feb 08, 2018 at 10 PM EST</div>-->
-							<!--<div class="simply-countdown simply-countdown-one"></div-->
-
+							<button id="myBtn">Contribute</button>
 						</div>
 					</div>
 				</div>
+				<!-- The Modal -->
+
 				<div class="col-sm-6 hideme">
 					<div class="card">
 						<div class="container2">
 							<p class=" card sale_bonus">
-								<span class="bonus">BONUS: 150%</span>
+								BONUS: 150%
 							</p>
 							<p align="center">
-							<span class="sale_text_blu" style="margin-top:20px;">1 ETH = 12,500 TND</span><br>
-							<span class="sale_text_blu">Softcap: 100 ETH</span><br>
-							<span class="sale_text_red">Hardcap: 400 ETH</span><br>
-							<span class="sale_text_blu">Min. Contribution: 0.1 ETH</span><br>
-							<span class="sale_text_red">Max. Contribution: 50 ETH</span><br>
-							<span class="sale_text_blu">Duration: Feb 8 - Feb 15</span>
+								<span class="sale_text_blu" style="margin-top:20px;">1 ETH = 12,500 TND</span>
+								<br>
+								<span class="sale_text_blu">Softcap: 100 ETH</span>
+								<br>
+								<span class="sale_text_red">Hardcap: 400 ETH</span>
+								<br>
+								<span class="sale_text_blu">Min. Contribution: 0.1 ETH</span>
+								<br>
+								<span class="sale_text_red">Max. Contribution: 50 ETH</span>
+								<br>
+								<span class="sale_text_blu">Duration: Feb 8 - Feb 15</span>
 							</p>
 							<p class="sicons">
 								<a href="https://t.me/joinchat/HjIQExE7tZa4f4XqbbSfWQ" target="blank">
 									<img class="hideme" src="images/icons/telegramBanner.png" width="44">
 								</a>
-								<a class="btn btn-success btn-lg" href="files/whitepaper.pdf" target="_blank">Whitepaper</a>
+								<a class="btn btn-success btn-lg" href="https://trenditstudios.com/files/whitepaper.pdf" target="_blank">Whitepaper</a>
 							</p>
 						</div>
 					</div>
@@ -147,10 +156,65 @@
 		</div>
 	</div>
 
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+
+			<span class="close">&times;</span>
+
+			<fieldset class="col-md- 12 modal_text" id="checkArray">
+				<p class="modal_text1"> Disclaimer </p>
+				<input type="checkbox" name="chk[]"> I hereby acknowledge that I'm NOT a resident/citizen of the USA/Canada/ China nor a registered person therein.
+				<br>
+				<input type="checkbox" name="chk[]"> I hereby acknowledge that I have read the Trendit Whitepaper and agree to its full contents and accept to be legally
+				bound by them.
+				<br>
+				<input type="checkbox" name="chk[]"> I hereby acknowledge that Trend Tokens provide you early access to exclusive features on the platform and are not meant
+				for speculation.
+				<br>
+				<button class="btn btn-danger btn-lg text-center" id="contribute_btn">I Agree</button>
+			</fieldset>
+
+
+
+		</div>
+
+		<div class="modal-content2">
+
+			<span class="close">&times;</span>
+
+			<div class="discl">
+				<p class="modal_text1"> Instructions </p>
+				<img id="" src="crowdsale/images/qr.jpg" alt="">
+				<p id="#zerox">
+					0x5113309c84f7292b5f780748df5869cb9d0e3ad5
+				</p>
+
+			</div>
+			<div class="text-center">
+				<p id="caution1">
+					Please send ETHER to the address using a
+					<b>ERC-20</b> compatible wallet!
+					<br>
+					<b>DO NOT</b> send ETHER from an exchange wallet!
+					<br>
+					<a href="https://trenditstudios.com">How to add your Trend Tokens to your ERC20 compatible wallet</a>
+				</p>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
 
 
 	<!-- jQuery -->
-	<script src="crowdsale/js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="crowdsale/js/hassie.js"></script>
 	<!-- jQuery Easing -->
 	<script src="crowdsale/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
@@ -163,14 +227,19 @@
 	<!-- Main -->
 	<script src="crowdsale/js/main.js"></script>
 
+
+
+
 	<script>
 		var d = new Date(new Date().getTime() + 5 * 120 * 160 * 2500);
+
 		// default example
 		simplyCountdown('.simply-countdown-one', {
 			year: d.getFullYear(),
 			month: d.getMonth() + 1,
 			day: d.getDate() + 1
 		});
+
 		//jQuery example
 		$('#simply-countdown-losange').simplyCountdown({
 			year: d.getFullYear(),

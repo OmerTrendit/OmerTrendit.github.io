@@ -7,6 +7,105 @@
 * 	Template Style
 *
 * ======================================================= */
+#myBtn{
+  background-color: #ED1B34;
+  color: white;
+  font-family: 'Baloo Da', cursive;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+}
+.discl{
+  text-align: center;
+  font-family: 'Roboto',inherit;
+  color: black;
+  font-size: 24px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .discl{
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .discl{
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .discl{
+    font-size: 14px !important;
+  }
+}
+
+#img{
+  position: relative;
+  margin: 0 auto;
+}
+#caution1{
+  font-family: 'Roboto',inherit;
+  color: black;
+  font-weight: 2px;
+  font-size: auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /*   Could be more or less, depending on screen size */
+    display: block;
+}
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    overflow-x: auto;
+    border: 1px solid #888;
+    width: 90%; /*   Could be more or less, depending on screen size */
+    display: none;
+}
+
+/* The Close Button */
+.close {
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #4F5A91;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
 .navbar-fixed-top.scrolled {
@@ -180,6 +279,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: rgb(255, 255, 255);
   font-family: 'Baloo Da', cursive;;
 
+
 }
 
 .largefont2{
@@ -214,8 +314,14 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0 auto;
 
 }
-.bonus{
-
+.sale_bonus2{
+  background-color: #ED1B34;
+  color: white;
+  padding-top: 10px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -226,10 +332,47 @@ h1, h2, h3, h4, h5, h6, figure {
 /* Add some padding inside the card container */
 .container2 {
     padding: 10px 16px;
-    z-index: 2;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+
 }
 
+#linktext{
+  font-size: 1.0vw;
+}
+.modal_text1{
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-family: 'Baloo Da', cursive;
+  text-align: center;
+}
 
+.modal_text{
+  font-size: 20px;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', inherit;
+  text-align:left;
+}
+
+@media (max-width: 992px) {
+  .modal_text{
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal_text{
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal_text{
+    font-size: 14px !important;
+  }
+}
 
 .smallfont{
   font-size: 50px;
