@@ -10,9 +10,10 @@
 #myBtn{
   background-color: #ED1B34;
   color: white;
-  font-family: 'Baloo Da', cursive;
+  font-family: 'Roboto', inherit;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
+  border: none;
   font-size: 20px;
   width: 200px;
   height: 50px;
@@ -169,8 +170,9 @@ body {
   position: relative;
   background-color: #4e69ec;
   color: #ffffff;
-  padding: 60px 25px;
+  padding: 60px 5px;
 }
+
 
 .jumbotron-billboard .img {
   margin-bottom: 0px;
@@ -289,6 +291,14 @@ h1, h2, h3, h4, h5, h6, figure {
 
 }
 
+.largefont3{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-family: 'Roboto', inherit;;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .test{
   margin-top: 105px;
   color: black;
@@ -296,12 +306,34 @@ h1, h2, h3, h4, h5, h6, figure {
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    opacity: 100;
     transition: 0.3s;
-    background-color: white;
+    background-color: #f8f8f8;
     margin: auto;
-    margin-top: 37%;
-    width: 95%;
+    margin-top: 0%;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    width: 40%;
     z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .card{
+    width:60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card{
+    width:80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card{
+    width: 90%;
+  }
 }
 
 .sale_bonus{
