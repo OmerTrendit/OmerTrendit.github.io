@@ -380,6 +380,13 @@ h1, h2, h3, h4, h5, h6, figure {
   text-align: center;
 }
 
+.modal_text1{
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-family: 'Baloo Da', cursive;
+  text-align: center;
+}
+
 .modal_text{
   font-size: 20px;
   font-weight: 100;
