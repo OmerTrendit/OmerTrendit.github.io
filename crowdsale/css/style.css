@@ -170,13 +170,13 @@ body {
   position: relative;
   background-color: #4e69ec;
   color: #ffffff;
-  padding: 60px 5px;
+  padding: 0% 5px;
 }
 
 
 .jumbotron-billboard .img {
   margin-bottom: 0px;
-  opacity: 0.3;
+  opacity: 0.2;
   color: #fff;
   background: #000 url("https://media.giphy.com/media/sSrnQsI3r3P44/giphy.gif") center center;
   width: 100%;
